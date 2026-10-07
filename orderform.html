@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    
+
+    <style>
+        body{
+            background-image: url("homepage imgs/back botique.jpg");
+            color: maroon;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .form-container{
+            width: 400px;
+            background-color: beige;
+            margin: 50px auto;
+            padding: 30px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px gray ;
+        }
+        h1{
+            text-align: center;
+        }
+        .group{
+            margin: 15px ;
+        }
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+        input{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        textarea{
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button{
+            text-align: center;
+            border: none;
+            background-color: lightpink;
+            color: maroon;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .error{
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        #message{
+            color: darkgreen;
+            font-size: 20px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Tablet */
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 25px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .group {
+        margin: 12px;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+    .form-container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .group {
+        margin: 12px 0;
+    }
+    label {
+        font-size: 14px;
+    }
+    input {
+        padding: 9px;
+        font-size: 14px;
+    }
+    textarea {
+        font-size: 14px;
+    }
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .error {
+        font-size: 12px;
+    }
+    #message {
+        font-size: 16px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class=" form-container">
+        
+        <h1>ORDER FORM</h1>
+        
+        <form id="orderform" novalidate>
+            <div class="group">
+                <label>CUSTOMER NAME</label>
+                <input type="text" id="custname" required>
+                <div id="custnameerror" class="error"></div>
+            </div>
+        
+            <div class="group">
+                <label>EMAIL</label>
+                <input type="email" id="email" required>
+                <div id="emailerror" class="error"></div>
+            </div>
+        
+            <div class="group">
+                <label>PHONE</label>
+                <input type="tel" id="phone" required>
+                <div id="phoneerror" class="error"></div>
+            </div>
+
+            <div class="group">
+                <label>SIZE</label>
+                <select id="size" required>
+                    <option value="">Select Size</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                    <option value="Freesize">Free Size</option>
+                </select>
+                <div id="sizeerror" class="error"></div>
+            </div>
+
+            <div class="group">
+                <label>QUANTITY</label>
+                <input type="number" id="quantity" required>
+                <div id="quantityerror" class="error"></div>
+            </div>
+
+            <div class="group">
+                <label>EXPECT DELIVERY DATE</label>
+                <input type="date" id="deliverdate" required>
+                <div id="deliverdateerror" class="error"></div>
+            </div>
+
+            <div class="group">
+                <label>ADDRESS</label>
+                <textarea rows="5" cols="30" 
+                  placeholder="Enter your address" id="address" required></textarea>
+                <div id="addresserror" class="error"></div>
+            </div>
+            
+            <button id="submit">place order</button>
+            <div id="message" class="success"></div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

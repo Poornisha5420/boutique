@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.login-container {
+    width: 400px;
+    background-color: beige;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px lightcoral;
+    border-radius: 10px;
+}
+.login-container h1{
+    color: maroon;
+    font-size: 28px;
+    text-align: center;
+}
+.login-group{
+    color: maroon;
+    margin: 10px;
+    padding: 10px;
+}
+.login-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: maroon;
+}
+.login-group input{
+    width: 100%;
+}
+.login-container button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: lightpink;
+    color: maroon;
+    cursor: pointer;
+}
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+#successMessage {
+    color: darkgreen;
+    text-align: center;
+    margin-top: 10px;
+}
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .login-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 25px;
+    }
+    .login-container h1 {
+        font-size: 26px;
+    }
+    .login-group {
+        margin: 12px 0;
+    }
+}
+/* MOBILE*/
+@media screen and (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+    .login-container h1 {
+        font-size: 22px;
+    }
+    .login-group label {
+        font-size: 14px;
+    }
+    .login-group input {
+        padding: 9px;
+        font-size: 14px;
+    }
+    .login-container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .error {
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="login-container">
+
+        <h1>LOG IN</h1>
+
+        <form id="loginform" novalidate>
+
+            <div class="login-group">
+                <label>EMAIL</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="login-group">
+                <label>PASSWORD</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <button type="submit">LOG IN</button>
+
+            <div id="successMessage"></div>
+
+        </form>
+
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

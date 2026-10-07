@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <style>
+        
+.signup-container {
+    width: 400px;
+    background-color: beige;
+    margin: 50px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px lightcoral;
+    border-radius: 10px;
+}
+.signup-container h1{
+    color: maroon;
+    font-size: 28px;
+    text-align: center;
+}
+.signup-group{
+    color: maroon;
+    margin: 10px;
+    padding: 10px;
+}
+.signup-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: maroon;
+}
+.signup-group input{
+    width: 100%;
+}
+.signup-container button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: lightpink;
+    color: maroon;
+    cursor: pointer;
+}
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+#successMessage {
+    color: darkgreen;
+    text-align: center;
+    margin-top: 10px;
+}
+.login-link {
+    text-align: center;
+}
+.login-link a {
+    color: maroon;
+}
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .signup-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 25px;
+    }
+    .signup-container h1 {
+        font-size: 26px;
+    }
+    .signup-group {
+        margin: 12px 0;
+    }
+}
+/* MOBILE*/
+@media screen and (max-width: 480px) {
+    .signup-container {
+        width: 90%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+    .signup-container h1 {
+        font-size: 22px;
+    }
+    .signup-group label {
+        font-size: 14px;
+    }
+    .signup-group input {
+        padding: 9px;
+        font-size: 14px;
+    }
+    .signup-container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .error {
+        font-size: 12px;
+    }
+    .login-link {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+
+        <h1>CREATE ACCOUNT</h1>
+
+        <form id="signupForm">
+
+            <div class="signup-group">
+                <label>NAME</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <div id="nameError" class="error"></div>
+            </div>
+
+            <div class="signup-group">
+                <label>EMAIL</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <div id="emailError" class="error"></div>
+            </div>
+
+            <div class="signup-group">
+                <label>PASSWORD</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <div id="passwordError" class="error"></div>
+            </div>
+
+            <button type="submit">CREATE</button>
+
+            <div id="successMessage"></div>
+
+        </form>
+
+        <p class="login-link">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+    <script src="createaccount.js"></script>
+</body>
+</html>
